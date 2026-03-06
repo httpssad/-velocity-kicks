@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aero-Green 1.0 - Revolution urbaine en sneakers éco. 500 exemplaires. Limited drop.">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>AERO-GREEN 1.0 | VELOCITY</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Aero-Green 1.0",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=90",
+        "description": "Street revolution. Eco warrior. Limited 500. Now.",
+        "brand": {"@type": "Brand", "name": "VELOCITY"},
+        "offers": {"@type": "Offer", "price": "129.99", "priceCurrency": "EUR", "availability": "https://schema.org/LimitedAvailability"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "500"}
+    }
+    </script>
+
+    <style>
+        /* ========== RESET ========== */
+        :root {
+            --primary: #ff6b35;
+            --secondary: #004e89;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --accent: #00ff88;
+            --border: #222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 0.95;
+            text-shadow: 4px 4px 0 var(--primary), 8px 8px 0 var(--secondary);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            text-shadow: 3px 3px 0 var(--primary);
+        }
+
+        p {
+            font-size: 1rem;
+            color: #ccc;
+            font-weight: 400;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--primary);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: var(--light);
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary);
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 10;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            animation: slideInLeft 0.8s ease-out 0.1s both;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .hero-desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            max-width: 90%;
+            margin-bottom: 2rem;
+            animation: slideInLeft 0.8s ease-out 0.2s both;
+            color: #bbb;
+        }
+
+        .meta-flex {
+            display: flex;
+            gap: 3rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+            animation: slideInLeft 0.8s ease-out 0.3s both;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .meta-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-shadow: 2px 2px 0 var(--secondary);
+        }
+
+        .meta-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            animation: slideInLeft 0.8s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Bebas Neue', sans-serif;
+            box-shadow: 4px 4px 0 var(--secondary);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--secondary);
+            transition: top 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0 var(--secondary);
+        }
+
+        .btn:hover::before {
+            top: 0;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            box-shadow: none;
+        }
+
+        .btn-outline::before {
+            background: var(--primary);
+        }
+
+        .btn-outline:hover {
+            color: white;
+        }
+
+        /* ========== HERO IMAGE ========== */
+        .hero-visual {
+            position: relative;
+            height: 600px;
+            animation: slideInRight 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: float 4s ease-in-out infinite;
+            filter: brightness(0.95) contrast(1.1);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(0.5deg);
+            }
+        }
+
+        .deco-box {
+            position: absolute;
+            border: 3px solid var(--primary);
+            background: transparent;
+        }
+
+        .deco-box-1 {
+            width: 150px;
+            height: 150px;
+            top: -30px;
+            right: -30px;
+            animation: rotateBox 8s linear infinite;
+        }
+
+        .deco-box-2 {
+            width: 100px;
+            height: 100px;
+            bottom: 50px;
+            left: -50px;
+            border-color: var(--secondary);
+            animation: rotateBox 10s linear infinite reverse;
+        }
+
+        @keyframes rotateBox {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .deco-line {
+            position: absolute;
+            background: var(--accent);
+            animation: slideIn 1s ease-out;
+        }
+
+        .line-1 {
+            width: 100px;
+            height: 3px;
+            top: 100px;
+            left: -80px;
+            animation: slideInLeft 0.8s ease-out 0.5s both;
+        }
+
+        .line-2 {
+            width: 150px;
+            height: 3px;
+            bottom: 100px;
+            right: -100px;
+            animation: slideInRight 0.8s ease-out 0.6s both;
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .deco-box {
+                display: none;
+            }
+        }
+
+        /* ========== STOCK SECTION ========== */
+        .stock-banner {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 5px solid var(--secondary);
+            animation: slideInLeft 0.8s ease-out 0.5s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stock-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            from {
+                right: -100%;
+            }
+            to {
+                right: 100%;
+            }
+        }
+
+        .stock-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stock-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 var(--secondary);
+        }
+
+        .stock-count {
+            font-size: 2.5rem;
+            font-weight: 900;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .stock-bar {
+            height: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        .stock-fill {
+            height: 100%;
+            background: var(--secondary);
+            width: 82%;
+            animation: growBar 1.5s ease-out;
+        }
+
+        @keyframes growBar {
+            from {
+                width: 0;
+            }
+        }
+
+        /* ========== SPECS SECTION ========== */
+        .specs-section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-top: 2px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .spec-card {
+            background: #111;
+            border: 2px solid var(--primary);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .spec-card:nth-child(1) { animation-delay: 0.1s; }
+        .spec-card:nth-child(2) { animation-delay: 0.2s; }
+        .spec-card:nth-child(3) { animation-delay: 0.3s; }
+        .spec-card:nth-child(4) { animation-delay: 0.4s; }
+        .spec-card:nth-child(5) { animation-delay: 0.5s; }
+        .spec-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .spec-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            z-index: -1;
+            transition: top 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .spec-card:hover::before {
+            top: 0;
+        }
+
+        .spec-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0 var(--secondary);
+            color: white;
+        }
+
+        .spec-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .spec-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-card:hover .spec-value {
+            color: white;
+        }
+
+        .spec-label {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+            color: #999;
+        }
+
+        .spec-card:hover .spec-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ========== SIZE SELECTOR ========== */
+        .sizing-section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sizing-section h2 {
+            margin-bottom: 3rem;
+        }
+
+        .sizes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .size-btn {
+            aspect-ratio: 1;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .size-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--primary);
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .size-btn:hover::before {
+            transform: scaleX(1);
+        }
+
+        .size-btn:hover {
+            color: white;
+            transform: translate(-3px, -3px);
+            box-shadow: 6px 6px 0 var(--secondary);
+        }
+
+        .size-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--secondary);
+            box-shadow: 6px 6px 0 var(--secondary);
+        }
+
+        .selected-size {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin: 1.5rem 0;
+            min-height: 2rem;
+            font-weight: 700;
+            font-family: 'Bebas Neue', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* ========== ECO SECTION ========== */
+        .eco-section {
+            background: #111;
+            padding: 6rem 2rem;
+            border-top: 2px solid var(--secondary);
+        }
+
+        .eco-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .eco-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .eco-list {
+            list-style: none;
+        }
+
+        .eco-list li {
+            padding: 1.2rem 0;
+            border-bottom: 2px solid var(--border);
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1rem;
+        }
+
+        .eco-list li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .eco-image-box {
+            position: relative;
+            height: 400px;
+            border: 3px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            background: #0a0a0a;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @media (max-width: 1024px) {
+            .eco-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .eco-image-box {
+                height: 300px;
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #000;
+            border-top: 2px solid var(--primary);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links a {
+            color: #777;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* ========== MODAL ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #111;
+            width: 100%;
+            max-width: 500px;
+            padding: 3rem;
+            position: relative;
+            border: 2px solid var(--primary);
+            box-shadow: 10px 10px 0 var(--secondary);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--primary);
+            border: none;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal h2 {
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.95rem;
+            border: 2px solid var(--primary);
+            background: #0a0a0a;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0 var(--secondary);
+        }
+
+        .form-submit:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0 var(--secondary);
+        }
+
+        /* ========== ACCESSIBILITY ========== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* ========== PARALLAX ========== */
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                text-shadow: 2px 2px 0 var(--primary), 4px 4px 0 var(--secondary);
+            }
+
+            h2 {
+                text-shadow: 2px 2px 0 var(--primary);
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sizes-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">⚡ VELOCITY</a>
+            <nav>
+                <a href="#specs">Specs</a>
+                <a href="#eco">Eco</a>
+                <a href="#size">Drop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>AERO<br>GREEN<br>1.0</h1>
+                <p class="hero-subtitle">STREET REVOLUTION</p>
+                <p class="hero-desc">500 exemplaires. Une seule chance. Performance maximale rencontre responsabilité écologique. Le temps presse.</p>
+
+                <div class="stock-banner">
+                    <div class="stock-content">
+                        <div class="stock-info">
+                            <h3>LIMITED DROP</h3>
+                            <div class="stock-count">450 LEFT</div>
+                            <div class="stock-bar">
+                                <div class="stock-fill"></div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
+                            HURRY<br>STOCK<br>MOVES FAST
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meta-flex">
+                    <div class="meta-item">
+                        <div class="meta-number">215g</div>
+                        <div class="meta-label">Weight</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-number">45mm</div>
+                        <div class="meta-label">Bounce</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-number">100%</div>
+                        <div class="meta-label">Eco</div>
+                    </div>
+                </div>
+
+                <div class="cta-group">
+                    <button class="btn" id="reserveBtn">Reserve Now</button>
+                    <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="deco-box deco-box-1"></div>
+                <div class="deco-box deco-box-2"></div>
+                <div class="deco-line line-1"></div>
+                <div class="deco-line line-2"></div>
+                
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=90&auto=format&fit=crop" 
+                         alt="AERO-GREEN 1.0 Sneaker" 
+                         class="floating-image"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECS -->
+        <section class="specs-section" id="specs">
+            <div class="section-header">
+                <h2>STREET TECH</h2>
+                <p>Performance engineered for the concrete jungle</p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">⚡</div>
+                    <div class="spec-value">215g</div>
+                    <h3>Ultra Light</h3>
+                    <p class="spec-label">Featherweight engineering. Every gram counts when you're running.</p>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">🔄</div>
+                    <div class="spec-value">45mm</div>
+                    <h3>Max Bounce</h3>
+                    <p class="spec-label">AeroBoost™ technology. Pure responsiveness. Zero fatigue.</p>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">♻️</div>
+                    <div class="spec-value">100%</div>
+                    <h3>Eco Materials</h3>
+                    <p class="spec-label">Ocean plastic. Urban waste. Recycled into revolution.</p>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">🌍</div>
+                    <div class="spec-value">-60%</div>
+                    <h3>Carbon Cut</h3>
+                    <p class="spec-label">Lower impact. Same impact. Fighting climate change, one step.</p>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">👟</div>
+                    <div class="spec-value">12h+</div>
+                    <h3>All Day</h3>
+                    <p class="spec-label">Marathon tested. Athlete approved. No blisters. No pain.</p>
+                </div>
+
+                <div class="spec-card">
+                    <div class="spec-icon">⭐</div>
+                    <div class="spec-value">4.9/5</div>
+                    <h3>Rated</h3>
+                    <p class="spec-label">500 pro athletes. 500 approvals. Reality, not hype.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIZE SELECTOR -->
+        <section class="sizing-section" id="size">
+            <h2>Pick Your Size</h2>
+            <div class="sizes-grid" role="group" aria-label="Size selection">
+                <button class="size-btn" data-size="36">36</button>
+                <button class="size-btn" data-size="37">37</button>
+                <button class="size-btn" data-size="38">38</button>
+                <button class="size-btn" data-size="39">39</button>
+                <button class="size-btn" data-size="40">40</button>
+                <button class="size-btn" data-size="41">41</button>
+                <button class="size-btn" data-size="42">42</button>
+                <button class="size-btn" data-size="43">43</button>
+                <button class="size-btn" data-size="44">44</button>
+                <button class="size-btn" data-size="45">45</button>
+            </div>
+            <div class="selected-size" id="selectedSize"></div>
+            <button class="btn" id="reserveBtn2">Lock In Your Size</button>
+        </section>
+
+        <!-- ECO SECTION -->
+        <section class="eco-section" id="eco">
+            <div class="eco-inner">
+                <div>
+                    <h2>PLANET FIRST</h2>
+                    <p style="margin-bottom: 2rem; font-size: 1.1rem;">We're not just making sneakers. We're building a movement for tomorrow.</p>
+                    
+                    <ul class="eco-list">
+                        <li><strong>100% Recycled Materials</strong> — Ocean plastic, urban waste, transformed.</li>
+                        <li><strong>Carbon Negative Production</strong> — ISO certified facilities. Zero guilt.</li>
+                        <li><strong>Biodegradable Packaging</strong> — Plastic-free delivery to your door.</li>
+                        <li><strong>1€ Per Sale</strong> — Goes directly to reforestation projects globally.</li>
+                        <li><strong>Lifetime Warranty</strong> — Built to last. Built to matter.</li>
+                    </ul>
+                </div>
+
+                <div class="eco-image-box">🌱</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 VELOCITY SPORTS. STREET EDITION. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">×</button>
+            <h2>Reserve Your Pair</h2>
+            
+            <form id="reservationForm" onsubmit="handleReservation(event)">
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+33 6 XX XX XX XX">
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Size *</label>
+                    <select id="size" name="size" required>
+                        <option value="">-- Select Size --</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form-submit">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeSuccess">×</button>
+            <div style="text-align: center;">
+                <div style="font-size: 3.5rem; margin-bottom: 1rem;">✓</div>
+                <h2>You're In</h2>
+                <p style="margin: 1.5rem 0; color: #aaa;">Your AERO-GREEN 1.0 is locked in. Delivery incoming.</p>
+                <p style="color: #666; font-size: 0.9rem;">Check your email for confirmation. 5-7 days delivery.</p>
+                <button class="btn" onclick="closeSuccessModal()" style="margin-top: 2rem;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Parallax effect
+        window.addEventListener('mousemove', (e) => {
+            const floatingImage = document.querySelector('.floating-image');
+            if (floatingImage) {
+                const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                floatingImage.style.transform = `translateY(-20px) rotate(0.5deg) translate(${x}px, ${y}px)`;
+            }
+        });
+
+        // Size selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('selectedSize').textContent = `SIZE ${this.dataset.size} SELECTED`;
+            });
+        });
+
+        // Modal controls
+        const modal = document.getElementById('reservationModal');
+        const successModal = document.getElementById('successModal');
+
+        document.getElementById('reserveBtn').addEventListener('click', () => modal.classList.add('active'));
+        document.getElementById('reserveBtn2').addEventListener('click', () => modal.classList.add('active'));
+        document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('active'));
+        document.getElementById('closeSuccess').addEventListener('click', () => successModal.classList.remove('active'));
+
+        document.getElementById('learnMoreBtn').addEventListener('click', () => {
+            document.getElementById('specs').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+            if (e.target === successModal) successModal.classList.remove('active');
+        });
+
+        // Form submission
+        function handleReservation(e) {
+            e.preventDefault();
+            modal.classList.remove('active');
+            successModal.classList.add('active');
+            document.getElementById('reservationForm').reset();
+        }
+
+        function closeSuccessModal() {
+            successModal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
